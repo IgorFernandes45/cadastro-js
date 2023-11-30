@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="cadastro.js"></script>
+    <title>formulario</title>
+</head>
+
+<body>
+    <div class="corpo">
+        <h1>Cadastro de Úsuario</h1>
+        <form action="" method="post">
+            <div>
+                <label class="titulos">Nome:</label><br>
+                <input class="campos" id="nome" type="text" name="nome" maxlength="20" placeholder="Digite seu nome"
+                    pattern="[A-Za-z]+">
+                <p id="error"></p>
+            </div>
+            <div>
+                <label class="titulos">Sobrenome:</label><br>
+                <input class="campos" id="sobrenome" type="text" name="sobrenome" maxlength="20"
+                    placeholder="Digite seu sobrenome" pattern="[A-Za-z]+">
+
+            </div>
+            <div>
+                <label class="titulos">Foto:</label><br>
+                <input class="file" id="foto" type="file" name="foto" accept=".jpg,.png,.doc">
+
+            </div>
+            <div>
+                <label class="titulos">Idade:</label><br>
+                <input type="number" id="idade" name="idade" placeholder="Digite sua idade" maxlength="3">
+
+            </div>
+            <div>
+                <label class="titulos">Telefone:</label><br>
+                <input type="number" id="telefone" name="telefone"  minlength="10" maxlength="12"
+                    placeholder="telefone com DDD">
+            </div>
+            <div>
+                <label class="titulos">e-mail:</label><br>
+                <input class="campos" type="email" id="email" name="email" placeholder="Digite seu e-mail">
+
+            </div>
+            <div>
+                <label>Senha:</label><br>
+                <input type="password" id="senha" name="senha" minlength="8"
+                    placeholder="Digite sua senha: minimo 8 digitos">
+
+            </div>
+            <div>
+                <label class="titulos">Salário:</label><br>
+                <input type="number" id="salario" name="salario" placeholder="Digite seu salário" minlength="3" maxlength="9">
+            </div>
+            <div>
+                <label>Sexo:</label>
+                <select>
+                    <option id="sexo" name="sexo" value="masculino">masculino</option>
+                    <option id="sexo" name="sexo" value="feminino">feminino</option>
+                </select>
+            </div>
+            <div class="saude">
+                <label class="titulos">tem plano de saúde</label>
+                <input class="checkbox" type="checkbox" value="plano de saúde">
+                <label class="titulos">fuma</label>
+                <input class="checkbox" type="checkbox" value="fuma">
+            </div>
+            <div>
+                <label>Observações:</label><br>
+                <textarea id="observacoes" name="observaçoes" rows="5" cols="33" maxlength="200"></textarea>
+            </div>
+            <div>
+                <input onclick="valida();" class="submit" type="submit" id="enviar" value="enviar">
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
